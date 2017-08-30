@@ -1,0 +1,12 @@
+<h1> Artist page</h1>
+<%= form_for @artist do |f| %>
+  <%= f.label "Artist name" %>
+  <%= f.text_field :artist_name %> <br />
+  <%= f.label "Image path" %>
+  <%= f.text_field :image_path %> <br / />
+  <%= submit_tag "Create Artist" %>
+<% end %>
+
+<br />
+
+<%= link_to "All artists", artists_path %>
