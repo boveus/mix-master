@@ -1,0 +1,11 @@
+<h2> Create a new song for <%= @artist.artist_name %></h2>
+
+<%= form_for([@artist, @song]) do |f| %>
+  <%= f.label 'Song title' %>
+  <%= f.text_field :title %><br />
+  <%= submit_tag "Create song" %>
+<% end %>
+
+<br />
+
+<%= link_to "All artists", artists_path %>

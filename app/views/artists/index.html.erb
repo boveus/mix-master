@@ -1,8 +1,8 @@
 <h4>Artists </h4>
 
 <% @artists.each do |artist| %>
-  Name: <%= artist.artist_name %> <br />
-<%= image_tag artist.image_path %>
+  Name: <%= link_to artist.artist_name, artist_path(artist) %> <br />
+<%= image_tag artist.image_path %> <br />
 <% end %>
 
 <br />

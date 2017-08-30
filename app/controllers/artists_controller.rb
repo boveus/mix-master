@@ -14,9 +14,8 @@ class ArtistsController < ApplicationController
 
   def create
     @artist = Artist.create(artist_params)
+    redirect_to artists_path
   end
-
-
 
   private
 

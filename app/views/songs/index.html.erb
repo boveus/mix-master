@@ -1,0 +1,15 @@
+<h5> <%= @artist.artist_name %> Songs </h5>
+
+<%= image_tag @artist.image_path %>
+
+<% @songs.each do |song| %>
+<p> <%= song.title %> </p>
+<% end %>
+
+<br />
+<br />
+<%= link_to "#{@artist.artist_name}'s page", artist_path(@artist) %>
+
+<%= link_to "All artists", artists_path %>
+
+<%= link_to "New song", new_artist_song_path(@artist) %>

@@ -6,7 +6,7 @@ RSpec.feature "User submits a new artist" do
     visit('/artists')
     click_on 'New artist'
 
-    expect(current_path).to eq('/artists/new')
+    expect(current_path).to eq(new_artist_path)
 
     artist_name = 'Puff Daddy'
     artist_image_path = "http://s3.amazonaws.com/hiphopdx-production/2015/07/Puff-Daddy_07-06-2015.jpg"
@@ -15,8 +15,8 @@ RSpec.feature "User submits a new artist" do
     fill_in "artist_image_path", with: artist_image_path
     click_on 'Create Artist'
 
-    expect(current_path).to eq('/artists')
-    #expect(page).to have_css("img[src=\"#{artist_image_path}\"]")
+    expect(current_path).to eq(artists_path)
+    expect(page).to have_css("img[src=\"#{artist_image_path}\"]")
     end
   end
 
